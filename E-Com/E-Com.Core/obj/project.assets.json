@@ -8,23 +8,23 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\Ahmad\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\E-Com\\E-Com.Core\\E-Com.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Ahmad\\source\\repos\\E-Com\\E-Com\\E-Com.Core\\E-Com.Core.csproj",
       "projectName": "E-Com.Core",
-      "projectPath": "C:\\Users\\User\\source\\repos\\E-Com\\E-Com.Core\\E-Com.Core.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\E-Com\\E-Com.Core\\obj\\",
+      "projectPath": "C:\\Users\\Ahmad\\source\\repos\\E-Com\\E-Com\\E-Com.Core\\E-Com.Core.csproj",
+      "packagesPath": "C:\\Users\\Ahmad\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ahmad\\source\\repos\\E-Com\\E-Com\\E-Com.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ahmad\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,8 +33,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/XocialiveProjects/_packaging/XOC-Platform/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
