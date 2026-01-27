@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="E-Com.API/E-Com.API.csproj" />
+  <Project Path="E-Com.Core/E-Com.Core.csproj" />
+  <Project Path="E-Com.Infrastructure/E-Com.Infrastructure.csproj" />
+</Solution>
