@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace E_Com.Core.Entities.Product
+namespace E_Com.Core.Interface
 {
-    internal class Class1test
+    internal interface ICategoryRepositery
     {
     }
 }

@@ -1,0 +1,62 @@
+﻿using E_Com.Core.Interface;
+using E_Com.Infrastructure.Database;
+using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
+
+
+namespace E_Com.Infrastructure.Repositries
+{
+    public class GenericRepositry<T> : IGenericRepository<T>where T : class
+
+        
+    {
+
+        private readonly AppDbContext _context;
+        public GenericRepositry(AppDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task AddAsync(T entity)
+        {
+           await _context.Set<T>().AddAsync(entity);
+           await _context.SaveChangesAsync();
+        }
+        public async Task DeleteAsync(int id)
+        {
+           var entity = await _context.Set<T>().FindAsync(id);
+            _context.Set<T>().Remove(entity);
+            await _context.SaveChangesAsync();
+        }
+        public async Task<IReadOnlyList<T>> GetAllAsync() => 
+        await _context.Set<T>().AsNoTracking().ToListAsync();
+
+        public async Task<IReadOnlyList<T>> GetAllAsync(params Expression<Func<T, object>>[] includes)
+        {
+          var query = _context.Set<T>().AsQueryable();
+            foreach(var  item in includes){
+                query = query.Include(item);
+            }
+            return await query.ToListAsync();
+        }
+        public Task<T> GetByIdAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+        public async Task<T> GetByIdAsync(int id, params Expression<Func<T, object>>[] includes)
+        {
+           IQueryable<T> query = _context.Set<T>();
+            foreach(var item in includes)
+            {
+                query = query.Include(item);
+            }
+           var enity = await query.FirstOrDefaultAsync(e => EF.Property<int>(e, "Id") == id);
+            return enity;
+        }
+        public Task UpdateAsync(T entity)
+        {
+           _context.Entry(entity).State = EntityState.Modified;
+            return _context.SaveChangesAsync();
+        }
+    }
+}
